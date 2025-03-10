@@ -22,7 +22,7 @@ public class TCPClient {
             // Send Student object to the server
             objectOutputStream.writeObject(student);
             System.out.println("Student object sent!");
-
+            //Master comment °-°
         } catch (IOException e) {
             e.printStackTrace();
         }
