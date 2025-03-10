@@ -13,7 +13,7 @@ public class UDPClient {
             DatagramPacket packet = new DatagramPacket(buffer, buffer.length, address, 8080);
             socket.send(packet);
             System.out.println("Message sent to server");
-
+            //add a random comm
             // Receive response from server
             byte[] responseBuffer = new byte[1024];
             DatagramPacket responsePacket = new DatagramPacket(responseBuffer, responseBuffer.length);
