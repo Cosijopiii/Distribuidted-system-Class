@@ -6,6 +6,6 @@ COPY src ./src
 RUN mvn package
 
 FROM maven:3.8.3-openjdk-17
-COPY --from=build /app/target/*.jar /app.jar
+COPY --from=build /app/target/*-jar-with-dependencies.jar /app.jar
 CMD ["sleep", "infinity"]
 

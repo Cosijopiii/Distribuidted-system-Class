@@ -34,11 +34,7 @@
 
     <build>
         <sourceDirectory>src</sourceDirectory>  <!-- Cambia la ruta de fuentes -->
-        <resources>
-            <resource>
-                <directory>src</directory>  <!-- Cambia la ruta de recursos -->
-            </resource>
-        </resources>
+
         <plugins>
             <!-- Plugin para crear fat JAR -->
             <plugin>
@@ -51,7 +47,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>src.Kafka.example.ClientProducer</mainClass>
+                            <mainClass>Kafka.example.ClientProducer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

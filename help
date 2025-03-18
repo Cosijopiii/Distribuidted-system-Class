@@ -1,6 +1,19 @@
+docker-compose build
 docker-compose up -d
 
 docker-compose down && docker-compose up -d  | para reiniciar
+
+docker-compose build
+
+# Detén y elimina los contenedores antiguos
+docker-compose down -v
+
+# Reconstruye las imágenes
+docker-compose build
+
+# Inicia los contenedores
+docker-compose up -d
+
 
 docker exec -it sistemasdistribuidos-kafka-1 kafka-topics.sh --create --topic test-topic --bootstrap-server kafka:9092 --partitions 1 --replication-factor 1
 
