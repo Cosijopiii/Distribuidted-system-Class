@@ -18,15 +18,13 @@ docker-compose up -d
 
 docker exec -it sistemasdistribuidos-kafka-1 kafka-topics.sh --create --topic test-topic --bootstrap-server kafka:9092 --partitions 1 --replication-factor 1
 
-
-*docker exec sistemasdistribuidos-kafka-1 kafka-topics.sh \
-  --list \
-  --bootstrap-server kafka:9092
+*docker exec sistemasdistribuidos-kafka-1 kafka-topics.sh --list --bootstrap-server kafka:9092
 
 
-docker exec -it sistemasdistribuidos-java-service-1 java -cp app.jar Kafka.example.ClientProducer
 
 docker exec -it sistemasdistribuidos-java-service-1 java -cp app.jar Kafka.example.ServerConsumer
+docker exec -it sistemasdistribuidos-java-service-1 java -cp app.jar Kafka.example.ClientProducer
+
 
 
   Java Client (Docker) → Kafka (Docker) → Java Server (Docker)
