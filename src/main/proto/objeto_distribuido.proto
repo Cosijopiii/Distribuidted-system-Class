@@ -1,0 +1,39 @@
+// objeto_distribuido.proto
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package = "com.ejemplo.grpc";
+option java_outer_classname = "ObjetoDistribuidoProto";
+
+package objetosdistribuidos;
+
+// Definición del servicio
+service ServicioObjetos {
+  rpc AlmacenarObjeto (ObjetoRequest) returns (Respuesta) {}
+  rpc RecuperarObjeto (ConsultaRequest) returns (ObjetoResponse) {}
+}
+
+// Mensaje para almacenar un objeto
+message ObjetoRequest {
+  string id = 1;
+  string tipo = 2;
+  bytes datos = 3;
+}
+
+// Mensaje para consultar un objeto
+message ConsultaRequest {
+  string id = 1;
+}
+
+// Respuesta con el objeto
+message ObjetoResponse {
+  string id = 1;
+  string tipo = 2;
+  bytes datos = 3;
+}
+
+// Respuesta genérica
+message Respuesta {
+  bool exito = 1;
+  string mensaje = 2;
+}
