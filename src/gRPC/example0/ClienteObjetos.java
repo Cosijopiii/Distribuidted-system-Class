@@ -1,4 +1,4 @@
-package gRPC;
+package gRPC.example0;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;

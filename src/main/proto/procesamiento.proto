@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package = "com.ejemplo.grpc";
+option java_outer_classname = "ProcesamientoProto";
+
+package procesamiento;
+
+service Procesador {
+  rpc ProcesarObjeto (ObjetoRequest) returns (ObjetoResponse) {}
+}
+
+message ObjetoRequest {
+  string id = 1;
+  string tipo = 2;
+  bytes datos = 3;
+}
+
+message ObjetoResponse {
+  string id = 1;
+  bool exito = 2;
+  string resultado = 3;
+}

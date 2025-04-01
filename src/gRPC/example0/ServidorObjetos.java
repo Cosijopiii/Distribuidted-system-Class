@@ -1,4 +1,4 @@
-package gRPC;
+package gRPC.example0;
 
 import com.google.protobuf.ByteString;
 import io.grpc.Server;
