@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package = "com.ejemplo.grpc";
+option java_outer_classname = "SimpleP2PProto";
+
+service SimpleP2P {
+  rpc SendMessage (SimpleMessage) returns (SimpleAck) {}
+  rpc Ping (Empty) returns (Pong) {}
+}
+
+message SimpleMessage {
+  string text = 1;
+  string sender = 2;
+}
+
+message SimpleAck {
+  bool received = 1;
+}
+
+message Empty {}
+
+message Pong {
+  string status = 1;
+}
