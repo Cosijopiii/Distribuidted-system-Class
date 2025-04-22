@@ -8,6 +8,8 @@ import io.grpc.stub.StreamObserver;
 import java.io.IOException;
 import java.util.Scanner;
 
+// 192.168.1.113
+
 public class SimpleP2PNode {
     private final String nodeName;
     private final int port;
