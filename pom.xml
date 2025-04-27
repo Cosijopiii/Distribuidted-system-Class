@@ -69,6 +69,25 @@
             <scope>provided</scope>
         </dependency>
 
+
+
+        <!-- JAVAFX -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>17</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>17</version>
+        </dependency>
+
+
+        <!-- JAVAFX -->
+
+
+
     </dependencies>
 
     <build>
@@ -130,6 +149,8 @@
                     </execution>
                 </executions>
             </plugin>
+
+
 
             <!-- Compilador Java -->
             <plugin>
