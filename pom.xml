@@ -71,21 +71,6 @@
 
 
 
-        <!-- JAVAFX -->
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>17</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-fxml</artifactId>
-            <version>17</version>
-        </dependency>
-
-
-        <!-- JAVAFX -->
-
 
 
     </dependencies>
@@ -162,6 +147,7 @@
                     <target>17</target>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>
