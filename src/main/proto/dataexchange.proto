@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package dataexchange;
+
+service DataService {
+  rpc GetData (DataRequest) returns (DataResponse);
+  rpc SendData (DataMessage) returns (DataAck);
+}
+
+message DataRequest {
+  string request_id = 1;
+}
+
+message DataResponse {
+  string id = 1;
+  string content = 2;
+}
+
+message DataMessage {
+  string id = 1;
+  string content = 2;
+}
+
+message DataAck {
+  bool success = 1;
+  string message = 2;
+}

@@ -1,0 +1,3 @@
+npm install @grpc/grpc-js @grpc/proto-loader
+
+node server.js
